@@ -1,0 +1,114 @@
+.main {
+    /* background-color: white; */
+    margin: 1rem 10rem;
+    border-radius: 8px;
+    padding: 2rem 0;
+    color: white;
+}
+
+.game-column {
+    text-align: center;
+}
+
+#question {
+    margin-bottom: 2rem;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: .8rem;
+    border-radius: 8px;
+    background: #22c1c3;
+    font-size: 1rem;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem rgba(0, 0, 0, 0.35);
+    transform: scale(1.02);
+    transition: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 1rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 2rem;
+    color: white;
+    width: 100%;
+}
+
+.correct {
+    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232,111) 100%);
+}
+
+.incorrect {
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+}
+
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-txt {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid rgba(11, 223, 36);
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: rgba(11, 223, 36);
+    width: 0%;
+}
+
+@media (max-width: 50rem) {
+    .main {
+        margin: 0;
+    }
+
+    .choice-container {
+        width: 20rem;
+        /* margin-left: 20px; */
+    }
+
+    #progressBar, #progressBarFull {
+        display: none;
+    }
+
+    #hud {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .hud-prefix, .hud-main-txt {
+        font-size: 100%;
+    }
+
+    #question {
+        font-size: 100%;
+    }
+
+    .choices {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
